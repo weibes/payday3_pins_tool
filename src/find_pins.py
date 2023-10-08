@@ -21,6 +21,16 @@ def find_4_digit_pins(numbers: list[int]) -> list[str]:
             curr_numbers = numbers.copy()
             curr_numbers.append(num)
             retList.extend(find_4_digit_pins(curr_numbers))
+    
+    # check for dupes, dumb way, could be refactored to ensure it works properly later.
+    retList_check = []
+    for item in retList:
+        if item not in retList_check:
+            retList_check.append(item)
+    retList = retList_check
     return retList
 
-            
+l = find_4_digit_pins([1, 6, 8]) 
+for item in l:
+    print(item)
+print(len(l))
