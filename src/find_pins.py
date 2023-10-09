@@ -30,7 +30,5 @@ def find_4_digit_pins(numbers: list[int]) -> list[str]:
     retList = retList_check
     return retList
 
-l = find_4_digit_pins([1, 6, 8]) 
-for item in l:
+for item in find_4_digit_pins([7,9,0]):
     print(item)
-print(len(l))
